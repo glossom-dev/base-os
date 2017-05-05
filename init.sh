@@ -1,6 +1,7 @@
 #!/bin/bash
 
-apt install aptitude git
+apt update && apt install tree unattended-upgrade aptitude git libbz2-dev libsqlite-dev libreadline-dev -y
+unattended-upgrade
 git clone https://github.com/riywo/anyenv /usr/local/anyenv
 echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh
 echo 'export PATH="/usr/local/anyenv/bin:$PATH"' >> /tmp/anyenv.sh
@@ -8,7 +9,7 @@ echo 'eval "$(anyenv init -)"' >> /tmp/anyenv.sh
 mv /tmp/anyenv.sh /etc/profile.d/
 source /etc/profile.d/anyenv.sh
 
-anyenv install rbenv && anyenv install pyenv && anyenv install plenv
+anyenv install rbenv && anyenv install pyenv && anyenv install plenv && anyenv install phpenv
 source /etc/profile.d/anyenv.sh
 
 pyenv install 2.7.12 && pyenv global 2.7.12
