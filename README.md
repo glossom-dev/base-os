@@ -1,2 +1,3 @@
-# base-os
-creating Glossom base OS image
+# glossom-public-base-os
+
+creating Glossom pulic base OS image
