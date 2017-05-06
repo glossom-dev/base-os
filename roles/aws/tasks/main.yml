@@ -1,9 +1,0 @@
-- name: pip install awscli
-  command: bash -lc "pip install awscli"
-
-
-- name: download script for setup aws cloudwatch logs agent
-  get_url:
-    dest: "{{ awslogs_agent_setup_py_dest }}"
-    url: https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
-    mode: 0755

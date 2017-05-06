@@ -2,5 +2,4 @@
   roles:
     - {role: timezone, tags: ['timezone']}
     - {role: sysstat, tags: ['sysstat']}
-    - {role: aws, tags: ['aws']}
-    - {role: boto, tags: ['boto']}
+
