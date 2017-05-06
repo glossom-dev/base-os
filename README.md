@@ -29,3 +29,7 @@ vagrant
 
 - http://tsunokawa.hatenablog.com/entry/2014/10/24/153151
 - https://scotch.io/tutorials/how-to-create-a-vagrant-base-box-from-an-existing-one
+
+anyenv/rbenv/pyenv/plenv
+
+- https://github.com/pyenv/pyenv/wiki/Common-build-problems
