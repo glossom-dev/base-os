@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update && apt install tree unattended-upgrades aptitude git libbz2-dev libsqlite-dev libreadline-dev -y
+apt install tree unattended-upgrades aptitude git libbz2-dev libsqlite-dev libreadline-dev build-essential curl wget -y
 unattended-upgrade
 git clone https://github.com/riywo/anyenv /usr/local/anyenv
 echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh
