@@ -13,6 +13,10 @@ cd /tmp/glossom-public-base-os && ./init.sh'
 
 ## Link
 
+git
+
+- http://qiita.com/sonots/items/826b90b085f294f93acf
+
 vagrant
 
 - http://tsunokawa.hatenablog.com/entry/2014/10/24/153151
