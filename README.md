@@ -9,3 +9,11 @@ sudo -H bash -lc 'which git || apt install git && \
 git clone https://github.com/glossom-dev/glossom-public-base-os.git /tmp/glossom-public-base-os && \
 cd /tmp/glossom-public-base-os && ./init.sh'
 ```
+
+
+## Link
+
+vagrant
+
+- http://tsunokawa.hatenablog.com/entry/2014/10/24/153151
+- https://scotch.io/tutorials/how-to-create-a-vagrant-base-box-from-an-existing-one
