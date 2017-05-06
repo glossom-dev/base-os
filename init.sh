@@ -18,7 +18,7 @@ apt install tree unattended-upgrades aptitude git build-essential curl wget \
     source /etc/profile.d/anyenv.sh  && \
     pip install --upgrade pip && pip install ansible==2.3.0 && \
     source /etc/profile.d/anyenv.sh && \
-    ansible-playbook -i hosts.self self.yml && \
+    bash -lc 'ansible-playbook -i hosts.self self.yml'
 
 # git ssh: http://qiita.com/sonots/items/826b90b085f294f93acf
 echo '#!/bin/bash
