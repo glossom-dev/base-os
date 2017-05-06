@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update && apt install tree unattended-upgrade aptitude git libbz2-dev libsqlite-dev libreadline-dev -y
+apt update && apt install tree unattended-upgrades aptitude git libbz2-dev libsqlite-dev libreadline-dev -y
 unattended-upgrade
 git clone https://github.com/riywo/anyenv /usr/local/anyenv
 echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh
@@ -19,6 +19,8 @@ plenv install 5.22.1 && plenv global 5.22.1
 source /etc/profile.d/anyenv.sh
 
 pip install --upgrade pip && pip install ansible==2.3.0
+
+ansible-playbook -i hosts.self self.yml
 
 # git ssh: http://qiita.com/sonots/items/826b90b085f294f93acf
 echo '#!/bin/bash

@@ -1,0 +1,19 @@
+---
+- name: Install sysstat packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: "{{ apt_cache_valid_time | default(omit) }}"
+    install_recommends: no
+  with_items:
+    - sysstat
+
+- name: sysstat dir
+  file: path=/var/log/sysstat state=directory owner=root group=root mode=755
+
+- name: activate sysstat
+  lineinfile: dest=/etc/default/sysstat regexp='^ENABLED="false"' line='ENABLED="true"' backrefs=yes
+
+- name: start sysstat
+  service: name=sysstat state=started enabled=yes
