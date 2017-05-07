@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "glossom-public-base-os" do |node|
     node.vm.box = "bento/ubuntu-16.04"
-    node.vm.provision :shell, :inline => 'sudo -H bash -lc "apt update && which git || apt install git -y && git clone https://github.com/glossom-dev/glossom-public-base-os.git /tmp/glossom-public-base-os && cd /tmp/glossom-public-base-os && ./init.sh"'
+    node.vm.provision :shell, :inline => 'sudo -H bash -lc "/vagrant/init.sh"'
 
     ## vagrant box add http://private.pkg.glossom.co.jp/vagrant/glossom-public-base-os-20170506.json
     #node.vm.box = "glossom-public-base-os-20170506"

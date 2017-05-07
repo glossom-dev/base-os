@@ -7,9 +7,7 @@ creating Glossom pulic base OS image
 Please execute below commands as root user.
 
 ```
-sudo -H bash -lc 'apt update && which git || apt install git -y && \
-git clone https://github.com/glossom-dev/glossom-public-base-os.git /tmp/glossom-public-base-os && \
-cd /tmp/glossom-public-base-os && ./init.sh'
+sudo -H bash -lc '/vagrant/init.sh'
 ```
 
 ## docker
