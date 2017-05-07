@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt install tree unattended-upgrades aptitude git build-essential curl wget \
+apt install tree unattended-upgrades aptitude git build-essential curl wget python-distutils-extra \
     libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl \
     llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev -y && \
     unattended-upgrade && \
