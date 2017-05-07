@@ -1,4 +1,5 @@
 - hosts: self
+  become: true
   roles:
     - {role: timezone, tags: ['timezone']}
     - {role: sysstat, tags: ['sysstat']}
