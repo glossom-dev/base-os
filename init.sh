@@ -1,10 +1,11 @@
 #!/bin/bash
 
 sudo apt update -q && \
-    sudo apt install -y -q git tree unattended-upgrades aptitude git build-essential curl wget \
-         python2.7 python-pip python-distutils-extra python-apt \
-         libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
-         llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
+    sudo apt install -y -q git tree unattended-upgrades aptitude && \
+    sudo aptitude install -y -q build-essential curl wget && \
+    sudo aptitude install -y -q python2.7 python-pip python-distutils-extra python-apt  && \
+    sudo aptitude install -y -q libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev && \
+    sudo aptitude install -y -q llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
     sudo unattended-upgrade && \
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
     sudo pip install --upgrade pip && \
