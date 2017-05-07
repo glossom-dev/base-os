@@ -14,7 +14,8 @@ sudo apt update && \
     sudo bash -lc 'pyenv install 2.7.12 && pyenv global 2.7.12' && \
     sudo bash -lc 'plenv install 5.22.1 && plenv global 5.22.1' && \
     sudo bash -lc 'pip install --upgrade pip && pip install ansible==2.3.0' && \
-    sudo bash -lc 'ansible-playbook -i hosts.self self.yml' && \
+    sudo bash -lc 'git clone https://github.com/glossom-dev/glossom-public-base-os.git /tmp/glossom-public-base-os' && \
+    sudo bash -lc 'cd /tmp/glossom-public-base-os && ansible-playbook -i hosts.self self.yml' && \
     # git ssh: http://qiita.com/sonots/items/826b90b085f294f93acf
     sudo rm -f /tmp/git_with_deploy_key && \
     echo '#!/bin/bash
