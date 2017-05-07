@@ -1,10 +1,14 @@
 #!/bin/bash
 
 sudo apt update && \
-    sudo apt install -y -q git tree unattended-upgrades aptitude git build-essential curl wget python-distutils-extra python-apt \
-         libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl \
+    sudo apt install -y -q git tree unattended-upgrades aptitude git build-essential curl wget \
+         python2.7 python-pip python-distutils-extra python-apt \
+         libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
          llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
-    sudo unattended-upgrade && sudo git clone https://github.com/riywo/anyenv /usr/local/anyenv && \
+    sudo unattended-upgrade && \
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
+    sudo pip install --upgrade pip \
+    sudo git clone https://github.com/riywo/anyenv /usr/local/anyenv && \
     sudo rm -rf /tmp/anyenv.sh && \
     echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh && \
     echo 'export PATH="/usr/local/anyenv/bin:$PATH"' >> /tmp/anyenv.sh && \
