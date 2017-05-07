@@ -5,12 +5,12 @@ sudo apt update -q && \
     sudo apt-get install -y -q aptitude && \
     sudo aptitude install -y -q git tree unattended-upgrades && \
     sudo aptitude install -y -q build-essential curl wget && \
-    sudo aptitude install -y -q python2.7 python-pip python-distutils-extra python-apt ansible && \
+    sudo aptitude install -y -q python2.7 python-pip python-distutils-extra python-apt && \
     sudo aptitude install -y -q libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev && \
     sudo aptitude install -y -q llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
     sudo unattended-upgrade && \
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
-    sudo pip install --upgrade pip && pip install ansible==2.3.0 && \
+    sudo pip install --upgrade pip && sudo pip install ansible==2.3.0 && \
     sudo git clone https://github.com/riywo/anyenv /usr/local/anyenv && \
     sudo rm -rf /tmp/anyenv.sh && \
     echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh && \
