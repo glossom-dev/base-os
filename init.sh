@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update && \
+sudo apt update -q && \
     sudo apt install -y -q git tree unattended-upgrades aptitude git build-essential curl wget \
          python2.7 python-pip python-distutils-extra python-apt \
          libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
