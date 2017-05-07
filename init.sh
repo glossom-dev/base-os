@@ -1,7 +1,8 @@
 #!/bin/bash
 
 sudo apt update -q && \
-    sudo apt install -y -q git tree unattended-upgrades aptitude && \
+    sudp apt install -y -q aptitude && \
+    sudo aptitude install -y -q git tree unattended-upgrades && \
     sudo aptitude install -y -q build-essential curl wget && \
     sudo aptitude install -y -q python2.7 python-pip python-distutils-extra python-apt  && \
     sudo aptitude install -y -q libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev && \
