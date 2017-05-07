@@ -7,7 +7,7 @@ sudo apt update -q && \
          llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
     sudo unattended-upgrade && \
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
-    sudo pip install --upgrade pip \
+    sudo pip install --upgrade pip && \
     sudo git clone https://github.com/riywo/anyenv /usr/local/anyenv && \
     sudo rm -rf /tmp/anyenv.sh && \
     echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh && \
