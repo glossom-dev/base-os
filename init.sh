@@ -56,6 +56,4 @@ fi' > /tmp/git_with_deploy_key && \
     chmod +x /tmp/git_with_deploy_key && \
     sudo mv /tmp/git_with_deploy_key /usr/local/bin && \
     # cleanup
-    sudo rm -rf ~/.ansible ~/.cache && \
-    sudo rm -f ~/.sudo_as_admin_successful && \
-    sudo rm -rf /root/.ssh/authorized_keys /root/.aptitude
+    sudo rm -rf /root/.ssh/authorized_keys /root/.aptitude ~/.sudo_as_admin_successful ~/.ansible ~/.cache
