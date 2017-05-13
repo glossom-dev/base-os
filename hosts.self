@@ -3,4 +3,4 @@ localhost
 
 [all:vars]
 ansible_connection=local
-ansible_shell_executable="bash -l"
+#ansible_shell_executable="bash -l"

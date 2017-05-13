@@ -18,9 +18,9 @@ sudo apt update -q && \
     echo 'eval "$(anyenv init -)"' >> /tmp/anyenv.sh && \
     sudo mv /tmp/anyenv.sh /etc/profile.d/ && \
     sudo bash -lc 'anyenv install rbenv && anyenv install pyenv && anyenv install plenv && anyenv install phpenv' && \
-    sudo bash -lc 'pyenv install 2.7.12 && pyenv global 2.7.12' && \
-    sudo bash -lc 'pip install --upgrade pip && pip install ansible==2.3.0' && \
-    sudo bash -lc 'plenv install 5.22.1 && plenv global 5.22.1' && \
+    #sudo bash -lc 'pyenv install 2.7.12 && pyenv global 2.7.12' && \
+    #sudo bash -lc 'pip install --upgrade pip ' && \
+    #sudo bash -lc 'plenv install 5.22.1 && plenv global 5.22.1' && \
     sudo bash -lc 'rm -rf /tmp/'$timestamp && \
     sudo bash -lc 'git clone https://github.com/glossom-dev/glossom-public-base-os.git /tmp/'$timestamp && \
     sudo bash -lc 'cd /tmp/'$timestamp' && ansible-playbook -i hosts.self self.yml' && \
