@@ -7,15 +7,16 @@ creating Glossom pulic base OS image
 Please execute below commands as root user.
 
 ```
-sudo -H bash -lc '/vagrant/init.sh'
+vagrant up
+vagrant package --output /tmp/glossom-public-base-os.box
+vagrant box add ./glossom-public-base-os.json
 ```
 
-## docker
+## AWS AMI
 
 ```
-docker build -t glossom/public-base:latest .
+packer build packer-glossom-public-base-os.json
 ```
-
 
 ## Link
 

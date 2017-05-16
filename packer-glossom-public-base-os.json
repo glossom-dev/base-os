@@ -7,7 +7,7 @@
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
         "ssh_timeout": "2m",
-        "ami_name": "glossom-public-base-os {{isotime \"2006-01-02\"}}"
+        "ami_name": "glossom-public-base-os-1.0.0"
     }],
     "provisioners": [{
         "type": "shell",
