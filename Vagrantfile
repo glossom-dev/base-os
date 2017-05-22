@@ -4,6 +4,8 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "glossom-public-base-os" do |node|
+    node.ssh.insert_key = true
+    node.vm.boot_timeout = 20
     node.vm.box = "bento/ubuntu-16.04"
     node.vm.provision :shell, :inline => 'sudo -H bash -lc "/vagrant/init.sh"'
 
