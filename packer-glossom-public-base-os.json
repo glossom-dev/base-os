@@ -7,14 +7,20 @@
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
         "ssh_timeout": "2m",
-        "ami_name": "glossom-public-base-os-1.0.2"
+        "ami_name": "glossom-public-base-os-1.0.3"
     }],
-    "provisioners": [{
-        "type": "shell",
-        "inline": [
-            "sudo apt install -y -q git && sudo rm -rf /tmp/glossom-public-base-os",
-            "git clone https://github.com/glossom-dev/glossom-public-base-os.git /tmp/glossom-public-base-os",
-            "bash -lc 'cd /tmp/glossom-public-base-os && ./init.sh'"
-        ]
-    }]
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "init.sh",
+            "destination": "/tmp/init.sh"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "bash -lc '/tmp/init.sh'"
+            ]
+        }
+    ],
+    "post-processors": ["vagrant"]
 }

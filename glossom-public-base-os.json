@@ -3,7 +3,7 @@
     "short_description": "glossom-public-base-os",
     "name": "glossom-public-base-os",
     "versions": [{
-        "version": "1.0.0",
+        "version": "1.0.3",
         "status": "active",
         "description_html": "<p>glossom-public-base-os Ubuntu 16.04 x86_64</p>",
         "description_markdown": "glossom-public-base-os Ubuntu 16.04 base x86_64",
