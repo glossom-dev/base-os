@@ -21,6 +21,5 @@
                 "bash -lc '/tmp/init.sh'"
             ]
         }
-    ],
-    "post-processors": ["vagrant"]
+    ]
 }
