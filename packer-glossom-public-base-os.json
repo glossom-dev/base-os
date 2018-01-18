@@ -3,11 +3,11 @@
         "type": "amazon-ebs",
         "ssh_pty": true,
         "region": "ap-northeast-1",
-        "source_ami": "ami-8422ebe2",
+        "source_ami": "ami-d39a02b5",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
         "ssh_timeout": "2m",
-        "ami_name": "glossom-public-base-os-1.0.5",
+        "ami_name": "glossom-public-base-os-1.0.6",
         "ami_groups": ["all"]
     }],
     "provisioners": [
