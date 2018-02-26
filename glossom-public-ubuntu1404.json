@@ -1,0 +1,25 @@
+{
+    "builders": [{
+        "type": "amazon-ebs",
+        "ssh_pty": true,
+        "region": "ap-northeast-1",
+        "source_ami": "ami-88091aef",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "ssh_timeout": "2m",
+        "ami_name": "glossom-public-ubuntu1404-1.0.0"
+    }],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "init_ubuntu1404.sh",
+            "destination": "/tmp/init_ubuntu1404.sh"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "bash -lc '/tmp/init_ubuntu1404.sh'"
+            ]
+        }
+    ]
+}
