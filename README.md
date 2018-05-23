@@ -32,3 +32,11 @@ vagrant
 anyenv/rbenv/pyenv/plenv
 
 - https://github.com/pyenv/pyenv/wiki/Common-build-problems
+
+## Base AMI
+
+Ubuntu Official AMI finder: https://cloud-images.ubuntu.com/locator/ec2/
+
+```
+amd64 hvm:ebs-ssd
+```
