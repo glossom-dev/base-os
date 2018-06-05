@@ -12,7 +12,6 @@ sudo add-apt-repository ppa:fkrull/deadsnakes-python2.7 &&
     sudo aptitude install -y -q llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
     sudo unattended-upgrade && \
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
-    sudo mv /etc/cron.daily/logrotate /etc/cron.hourly/logrotate && \
     sudo pip install --upgrade pip && sudo pip install ansible==2.3.0 awscli && \
     sudo git clone https://github.com/riywo/anyenv /usr/local/anyenv && \
     sudo rm -rf /tmp/anyenv.sh && \
