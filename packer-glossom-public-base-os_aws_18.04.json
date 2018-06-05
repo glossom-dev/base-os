@@ -13,13 +13,13 @@
     "provisioners": [
         {
             "type": "file",
-            "source": "init_ubuntu1804.sh",
-            "destination": "/tmp/init_ubuntu1804.sh"
+            "source": "init_18.04.sh",
+            "destination": "/tmp/init_18.04.sh"
         },
         {
             "type": "shell",
             "inline": [
-                "bash -lc '/tmp/init_ubuntu1804.sh'"
+                "bash -lc '/tmp/init_18.04.sh'"
             ]
         }
     ]

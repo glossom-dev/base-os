@@ -38,13 +38,13 @@
     "provisioners": [
         {
             "type": "file",
-            "source": "init.sh",
-            "destination": "/tmp/init.sh"
+            "source": "init_16.04.sh",
+            "destination": "/tmp/init_16.04.sh"
         },
         {
             "type": "shell",
             "inline": [
-                "bash -lc '/tmp/init.sh'"
+                "bash -lc '/tmp/init_16.04.sh'"
             ]
         }
     ]
