@@ -3,22 +3,23 @@
         "type": "amazon-ebs",
         "ssh_pty": true,
         "region": "ap-northeast-1",
-        "source_ami": "ami-88091aef",
+        "source_ami": "ami-d39a02b5",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
         "ssh_timeout": "2m",
-        "ami_name": "glossom-public-ubuntu1404-1.0.0"
+        "ami_name": "glossom-public-base-os-1.0.6",
+        "ami_groups": ["all"]
     }],
     "provisioners": [
         {
             "type": "file",
-            "source": "init_ubuntu1404.sh",
-            "destination": "/tmp/init_ubuntu1404.sh"
+            "source": "init_16.04.sh",
+            "destination": "/tmp/init_16.04.sh"
         },
         {
             "type": "shell",
             "inline": [
-                "bash -lc '/tmp/init_ubuntu1404.sh'"
+                "bash -lc '/tmp/init_16.04.sh'"
             ]
         }
     ]

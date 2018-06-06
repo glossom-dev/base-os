@@ -9,13 +9,13 @@ Please execute below commands as root user.
 ```
 vagrant up
 vagrant package --output /tmp/glossom-public-base-os.box
-vagrant box add ./glossom-public-base-os.json
+vagrant box add ./vagrant-glossom-public-base-os_16.04.json
 ```
 
 ## AWS AMI
 
 ```
-packer build packer-glossom-public-base-os.json
+packer build packer-glossom-public-base-os_aws_16.04.json
 ```
 
 ## Link
