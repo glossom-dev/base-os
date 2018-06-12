@@ -1,2 +1,0 @@
-- name: Set timezone on Ubuntu16
-  command: timedatectl set-timezone Asia/Tokyo
