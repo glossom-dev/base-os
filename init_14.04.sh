@@ -10,6 +10,7 @@ sudo add-apt-repository ppa:fkrull/deadsnakes-python2.7 &&
     sudo aptitude install -y -q python2.7 python-pip python-distutils-extra python-apt && \
     sudo aptitude install -y -q libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev && \
     sudo aptitude install -y -q llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
+    sudo aptitude install -y -q chrony && \
     sudo unattended-upgrade && \
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
     sudo pip install --upgrade pip && sudo pip install ansible==2.3.0 awscli && \

@@ -27,7 +27,7 @@
       "ssh_username": "root",
       "ssh_timeout": "3m",
 
-      "template_name": "glossom-public-base-os",
+      "template_name": "glossom-public-base-os-1.0.1",
       "template_display_text": "{{isotime \"2006-01-02\"}}",
       "template_featured": true,
       "template_password_enabled": false,
