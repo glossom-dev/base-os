@@ -7,7 +7,7 @@
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
         "ssh_timeout": "2m",
-        "ami_name": "u1804-glossom-public-base-os-1.0.1",
+        "ami_name": "u1804-glossom-public-base-os-1.0.2",
         "ami_groups": ["all"]
     }],
     "provisioners": [

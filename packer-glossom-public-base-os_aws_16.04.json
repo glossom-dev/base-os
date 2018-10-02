@@ -7,7 +7,7 @@
         "instance_type": "t3.small",
         "ssh_username": "ubuntu",
         "ssh_timeout": "2m",
-        "ami_name": "glossom-public-base-os-1.1.0",
+        "ami_name": "glossom-public-base-os-1.1.1",
         "ami_groups": ["all"]
     }],
     "provisioners": [

@@ -1,0 +1,51 @@
+{
+  "variables":{
+    "api_url": "https://compute.jp-east.idcfcloud.com/client/api",
+    "api_key": "{{env `IDCF_API_KEY`}}",
+    "secret_key": "{{env `IDCF_SECRET_KEY`}}",
+    "ip_address_id" : "{{env `IDCF_SOURCE_IP`}}",
+    "ssh_private_key_file" : "{{env `IDCF_SSH_PRIVATE_KEY`}}"
+    },
+    "builders": [ {
+      "type": "cloudstack",
+      "communicator": "ssh",
+      "api_url": "{{user `api_url`}}",
+      "api_key": "{{user `api_key`}}",
+      "secret_key": "{{user `secret_key`}}",
+      "http_get_only": true,
+      "public_ip_address": "{{user `ip_address_id`}}",
+      "use_local_ip_address": false,
+
+      "cidr_list": ["0.0.0.0/0"],
+      "hypervisor": "VMware",
+      "network": "network1",
+      "service_offering": "light.S1",
+      "source_template": "Ubuntu Server 16.04 LTS 64-bit",
+      "zone": "tesla",
+      "keypair": "root",
+      "ssh_private_key_file": "{{user `ssh_private_key_file`}}",
+      "ssh_username": "root",
+      "ssh_timeout": "3m",
+
+      "template_name": "glossom-public-base-os-1.0.1",
+      "template_display_text": "{{isotime \"2006-01-02\"}}",
+      "template_featured": true,
+      "template_password_enabled": false,
+      "template_scalable": true,
+      "template_os": "Ubuntu 14.04 (64-bit)"
+      }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "init_16.04.sh",
+            "destination": "/tmp/init_16.04.sh"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "bash -lc '/tmp/init_16.04.sh'"
+            ]
+        }
+    ]
+}
