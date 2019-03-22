@@ -3,4 +3,5 @@ localhost
 
 [all:vars]
 ansible_connection=local
+ansible_python_interpreter=/usr/bin/python3
 #ansible_shell_executable="bash -l"
