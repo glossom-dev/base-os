@@ -1,14 +1,17 @@
 #!/bin/bash
 
+
+
 timestamp=`date +%s`
 sudo apt update -q && \
+    sudo apt-get update && \
     sudo apt-get install -y -q aptitude && \
     sudo aptitude install -y -q git tree unattended-upgrades jq && \
     sudo aptitude install -y -q build-essential curl wget && \
     sudo aptitude install -y -q python2.7 python-pip python-distutils-extra python-apt && \
-    sudo aptitude install -y -q libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev && \
+    sudo aptitude install -y -q libssl1.0-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libedit-dev && \
     sudo aptitude install -y -q llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
-    sudo aptitude install -y -q chrony && \
+    sudo aptitude install -y -q chrony libffi-dev liblzma-dev python-openssl && \
     sudo unattended-upgrade && \
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
     sudo pip install --upgrade pip && sudo pip install ansible awscli && \
@@ -16,11 +19,13 @@ sudo apt update -q && \
     sudo rm -rf /tmp/anyenv.sh && \
     echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh && \
     echo 'export PATH="/usr/local/anyenv/bin:$PATH"' >> /tmp/anyenv.sh && \
+    echo 'export ANYENV_DEFINITION_ROOT="/usr/local/anyenv/.config"' >> /tmp/anyenv.sh && \
     echo 'eval "$(anyenv init -)"' >> /tmp/anyenv.sh && \
     sudo mv /tmp/anyenv.sh /etc/profile.d/ && \
-    sudo bash -lc 'anyenv install rbenv && anyenv install pyenv && anyenv install plenv && anyenv install phpenv' && \
+    sudo bash -lc 'anyenv install --force-init' &&  \
+    sudo bash -lc 'anyenv install -s rbenv && anyenv install -s pyenv && anyenv install -s plenv && anyenv install -s phpenv' && \
+    sudo bash -lc 'anyenv install -s goenv && anyenv install -s luaenv' && \
     sudo bash -lc 'git clone https://github.com/pyenv/pyenv-virtualenv.git /usr/local/anyenv/envs/pyenv/plugins/pyenv-virtualenv' && \
-    sudo bash -lc 'anyenv install goenv && anyenv install luaenv' && \
     #sudo bash -lc 'pyenv install 2.7.12 && pyenv global 2.7.12' && \
     #sudo bash -lc 'pip install --upgrade pip ' && \
     #sudo bash -lc 'plenv install 5.22.1 && plenv global 5.22.1' && \
