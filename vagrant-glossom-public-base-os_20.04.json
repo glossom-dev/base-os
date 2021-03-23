@@ -1,0 +1,15 @@
+{
+    "description": "glossom-public-base-os_20.04(Ubuntu 20.04 base) x86_64",
+    "short_description": "glossom-public-base-os_20.04",
+    "name": "glossom-public-base-os_20.04",
+    "versions": [{
+        "version": "1.0.0",
+        "status": "active",
+        "description_html": "<p>glossom-public-base-os Ubuntu 20.04 x86_64</p>",
+        "description_markdown": "glossom-public-base-os Ubuntu 20.04 base x86_64",
+        "providers": [{
+            "name": "virtualbox",
+            "url": "file:///tmp/glossom-public-base-os_20.04.box"
+        }]
+    }]
+}

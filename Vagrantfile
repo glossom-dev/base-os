@@ -13,4 +13,12 @@ Vagrant.configure("2") do |config|
     #node.vm.box = "glossom-public-base-os-20170506"
     #node.vm.box_url = "http://private.pkg.glossom.co.jp/vagrant/glossom-public-base-os-20170506.box"
   end
+
+  config.vm.define "glossom-public-base-os_20.04" do |node|
+    node.ssh.insert_key = true
+    node.vm.boot_timeout = 20
+    node.vm.box = "bento/ubuntu-20.04"
+    node.vm.provision :shell, :inline => 'sudo -H bash -lc "/vagrant/init_20.04.sh"'
+  end
+
 end
