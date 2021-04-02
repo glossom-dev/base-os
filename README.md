@@ -9,12 +9,12 @@ Please execute below commands as root user.
 ```
 # ubuntu 16.04
 vagrant up glossom-public-base-os
-vagrant package --output /tmp/glossom-public-base-os.box
+vagrant package glossom-public-base-os --output /tmp/glossom-public-base-os.box
 vagrant box add ./vagrant-glossom-public-base-os_16.04.json
 
 # ubuntu 20.04
 vagrant up glossom-public-base-os_20.04
-vagrant package --output /tmp/glossom-public-base-os_20.04.box
+vagrant package glossom-public-base-os_20.04 --output /tmp/glossom-public-base-os_20.04.box
 vagrant box add ./vagrant-glossom-public-base-os_20.04.json
 
 ```
