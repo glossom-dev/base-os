@@ -6,12 +6,13 @@ sudo apt update -q && \
     sudo apt-get install -y -q aptitude && \
     sudo aptitude install -y -q git tree unattended-upgrades jq && \
     sudo aptitude install -y -q build-essential curl wget && \
-    sudo aptitude install -y -q libssl1.1 zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libedit-dev && \
+    sudo aptitude install -y -q libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libedit-dev && \
     sudo aptitude install -y -q llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev && \
     sudo aptitude install -y -q chrony libffi-dev liblzma-dev python-openssl && \
     sudo sudo apt-get install -y -q python3-pip && \
     sudo unattended-upgrade && \
     sudo pip3 install --upgrade pip && sudo pip3 install ansible awscli && \
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10 && \
     sudo git clone https://github.com/riywo/anyenv /usr/local/anyenv && \
     sudo rm -rf /tmp/anyenv.sh && \
     echo 'export ANYENV_ROOT="/usr/local/anyenv"' > /tmp/anyenv.sh && \
