@@ -7,9 +7,16 @@ creating Glossom pulic base OS image
 Please execute below commands as root user.
 
 ```
-vagrant up
-vagrant package --output /tmp/glossom-public-base-os.box
+# ubuntu 16.04
+vagrant up glossom-public-base-os
+vagrant package glossom-public-base-os --output /tmp/glossom-public-base-os.box
 vagrant box add ./vagrant-glossom-public-base-os_16.04.json
+
+# ubuntu 20.04
+vagrant up glossom-public-base-os_20.04
+vagrant package glossom-public-base-os_20.04 --output /tmp/glossom-public-base-os_20.04.box
+vagrant box add ./vagrant-glossom-public-base-os_20.04.json
+
 ```
 
 ## AWS AMI
